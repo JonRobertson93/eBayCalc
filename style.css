@@ -1,0 +1,61 @@
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: auto;
+    margin-top: 4em;
+    border: 2px solid black;
+    padding: 20px;
+
+}
+
+.rows {
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 88%;
+    justify-content: space-around;
+    margin: auto;
+    align-items: center;
+
+}
+
+.boxes {
+	height: 2em;
+	text-align: right;
+}
+
+#calculate {
+	margin: 1em;
+	display: inline-flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
+
+#calculateButton {
+
+    padding: 1em 1.5em;
+    border-radius: 37px;
+    background: #2b3132;
+    color: white;
+    font-size: 98%;
+
+}
+
+#finalResult {
+    flex-wrap: wrap;
+    width: 88%;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
+
+#finalDollars {
+	padding-left: .5em;
+}
+
+.displayNone {
+	display:none!important;
+}
