@@ -59,3 +59,16 @@
 .displayNone {
 	display:none!important;
 }
+
+#detailLink {
+    width: 100%;
+    margin:auto;
+    text-align: center;
+    text-decoration: underline;
+    color: blue;
+}
+
+#details {
+    width: 50%;
+    margin: auto;
+}
