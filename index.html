@@ -5,49 +5,84 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title> eBay Profit Calculator </title>
 	<link href="style.css" rel="stylesheet">
+	<link href="responsive.css" rel="stylesheet">
 </head>
 <body>
+	<h1 id="title"> eBay Profit Calculator </h1>
 	<div id="container">
-		<!-- Profit Divs -->
 		<!-- Sale Price -->
-		<div id="salePrice" class="rows">
-			<h3> Item Sale Price </h3>
-			<input type="text" name="salePrice" class="boxes">
+		<div class="rows">
+			<div class="allHeadings">
+				<h3> Item Sale Price </h3>
+			</div>
+			<div class="allInputs">
+				<input type="text" name="salePrice" class="boxes">
+			</div>
 		</div>
 		<!-- Shipping Paid by Customer -->
-		<div id="customerShipping" class="rows">
-			<h3> Shipping Paid by Customer </h3>
-			<input type="text" name="customerShipping" class="boxes">
+		<div class="rows">
+			<div class="allHeadings">
+				<h3> Shipping Paid by Customer </h3>
+			</div>
+			<div class="allInputs">
+				<input type="text" name="customerShipping" class="boxes">
+			</div>
 		</div>
 		<!-- Fees Divs -->
 		<!-- Cost of Item -->
-		<div id="purchasePrice" class="rows">
-			<h3> Item Purchase Price </h3>
-			<input type="text" name="purchasePrice" class="boxes">
-		</div>
-		<!-- Shipping TO customer -->
-		<div id="shippingCost" class="rows">
-			<h3> Shipping Cost </h3>
-			<input type="text" name="shippingCost" class="boxes">
-		</div>
-		<!-- eBay Store Subscription? -->
-		<div id="storeSubscription" class="rows">
-			<h3> eBay Store Subscription? </h3>
-			<input type="radio" id="storeRadioYes" name="storeSubscription">
-			<label for="storeRadioYes"> Yes </label>
-			<input type="radio" id="storeRadioNo" name="storeSubscription">
-			<label for="storeRadioNo"> No </label>
+		<div class="rows">
+			<div class="allHeadings">
+				<h3> Item Purchase Price </h3>
+			</div>
+			<div class="allInputs">
+				<input type="text" name="purchasePrice" class="boxes">
+			</div>
 		</div>
 
-
-
+		<div class="rows">
+			<div class="allHeadings">
+				<h3> Shipping Cost </h3>
+			</div>
+			<div class="allInputs">
+				<input type="text" name="shippingCost" class="boxes">
+			</div>
+		</div>
+		<div class="rows">
+			<div class="allHeadings">
+				<h3> eBay Store Subscription? </h3>
+			</div>
+			<div id="radioButtons">
+				<input type="radio" id="storeRadioYes" name="storeSubscription">
+				<label for="storeRadioYes" id="storeRadioYesLabel"> Yes </label>
+				<input type="radio" id="storeRadioNo" name="storeSubscription">
+				<label for="storeRadioNo"> No </label>
+			</div>
+		</div>
+		<div class="rows">
+			<div class="allHeadings">
+				<h3> Select Selling Category </h3>
+			</div>
+			<div class="allInputs">
+				<select id="categoryDropdown">
+					<option value="Everything Else (most categories)"> Everything Else (most categories) </option>
+					<option value="Books, Movies, DVDS, Music"> Books, Movies, DVDs, Music </option>
+					<option value="Cell Phones (not accessories)"> Cell Phones (not accessories) </option>
+					<option value="Cameras & Drones (not accessories"> Cameras & Drones (not accessories) </option>
+					<option value="Coins & Paper Money"> Coins & Paper Money </option>
+					<option value="Desktops, Laptops & Tablets"> Desktops, Laptops & Tablets </option>
+					<option value="Printers & Monitors"> Printers & Monitors </option>
+					<option value="Computer Components/Parts"> Computer Components/Parts </option>
+					<option value="Video Game Consoles/Systems"> Video Game Consoles/Systems</option>
+				</select>
+			</div>
+		</div>
 
 		<!-- Calculate Button Div -->
 		<div id="calculate">
 			<button id="calculateButton" > See my profit! </button>
 		</div>
 		<div id="finalResult" class="displayNone">
-			<p> <b> NET PROFIT: </b> </p>
+			<p> NET PROFIT: </p>
 		</div>
 		
 
