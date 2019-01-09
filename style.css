@@ -1,36 +1,84 @@
+body {
+    max-width: 1050px;
+    margin: auto;
+}
+
+#title {
+    text-align: center;
+}
+
 #container {
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
+    width: 80%;
     margin: auto;
-    margin-top: 4em;
+    margin-top: 3em;
     border: 2px solid black;
     padding: 20px;
+    justify-content: center;
 
 }
 
-.rows {
-    display: inline-flex;
-    flex-wrap: wrap;
-    width: 88%;
-    justify-content: space-around;
-    margin: auto;
-    align-items: center;
+.allHeadings {
+    width: 100%;
+    text-align: center;
 
+}
+
+.allInputs {
+    width: 100%;
+    /*text-align: right;
+    justify-content: flex-end;*/
+}
+
+.rows {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+/* To prevent rows blending at wider viewports */
+.rows > h3 {
+    width: 95%;
 }
 
 .boxes {
 	height: 2em;
-	text-align: right;
+	text-align: left;
+    width: 100%;
+}
+
+
+#radioButtons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+}
+
+#storeRadioYesLabel {
+    margin-right: 5%;
+}
+
+#storeRadioNo {
+    margin-left: 5%;
+}
+
+
+#categoryDropdown {
+    margin: 1em;
 }
 
 #calculate {
-	margin: 1em;
 	display: inline-flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
     margin: auto;
+    margin-top: 5%;
     align-items: center;
 }
 
@@ -52,8 +100,16 @@
     align-items: center;
 }
 
+#finalResult p {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+
 #finalDollars {
 	padding-left: .5em;
+    font-size: 149%;
+    font-weight: bold;
 }
 
 .displayNone {
@@ -66,9 +122,31 @@
     text-align: center;
     text-decoration: underline;
     color: blue;
+    font-size: 105%;
 }
 
 #details {
-    width: 50%;
     margin: auto;
 }
+
+.redText {
+    color: #d70c00;
+}
+
+.greenText {
+    color: #045a04;
+}
+
+.boldText {
+    font-weight: bold;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+ul > li:before {
+    content: "-";
+}
+
