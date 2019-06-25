@@ -1,1 +1,15 @@
 /*TODO!!*/
+
+@media screen and (min-width: 595px) {
+    .allHeadings {
+        width: 49%;
+        text-align: left;
+    }
+    .allInputs {
+        width: 50%;
+    }
+    #radioButtons {
+    	justify-content: flex-start;
+    	width: 40%;
+    }
+}

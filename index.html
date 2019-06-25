@@ -6,9 +6,30 @@
 	<title> eBay Profit Calculator </title>
 	<link href="style.css" rel="stylesheet">
 	<link href="responsive.css" rel="stylesheet">
+	<link href="navbar.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 </head>
 <body>
-	<h1 id="title"> eBay Profit Calculator </h1>
+	<!-- Same across all project pages -->
+	<nav id="navbar">
+			<h1> eBay Profit Calculator </h1>
+			<a href="../" id="home"> Home </a>
+			<p id="projects"> Projects <i id="downArrow" class="fa fa-caret-down"></i></p>
+			<ul class="dropdown">
+				<li> Animal Clicker </li>
+				<li> Art Portfolio </li>
+				<li> Broken Headphones </li>
+				<li> Concentration Game </li>
+				<li> eBay Calculator </li>
+				<li> Frogger Game </li>
+				<li> HTML Email Blast Ad </li>
+				<li> Responsive News Site </li>
+				<li> Restroom Rater </li>
+				<li> Sample Portfolio Page </li>
+			</ul>
+		</nav>
+	<h2 id="title"> <span id="titleE">e</span><span id="titleB">B</span><span id="titleA">a</span><span id="titleY">y</span> <br/> <span class="smallerFont">Profit Calculator</span> </h1>
 	<div id="container">
 		<!-- Sale Price -->
 		<div class="rows">
@@ -64,22 +85,25 @@
 			</div>
 			<div class="allInputs">
 				<select id="categoryDropdown">
-					<option value="Everything Else (most categories)"> Everything Else (most categories) </option>
-					<option value="Books, Movies, DVDS, Music"> Books, Movies, DVDs, Music </option>
-					<option value="Cell Phones (not accessories)"> Cell Phones (not accessories) </option>
-					<option value="Cameras & Drones (not accessories"> Cameras & Drones (not accessories) </option>
-					<option value="Coins & Paper Money"> Coins & Paper Money </option>
-					<option value="Desktops, Laptops & Tablets"> Desktops, Laptops & Tablets </option>
-					<option value="Printers & Monitors"> Printers & Monitors </option>
-					<option value="Computer Components/Parts"> Computer Components/Parts </option>
-					<option value="Video Game Consoles/Systems"> Video Game Consoles/Systems</option>
+					<!-- Use <optgroup> so I can style in Chrome -->
+					<optgroup> 
+						<option value="Everything Else (most categories)"> Everything Else (most categories) </option>
+						<option value="Books, Movies, DVDS, Music"> Books, Movies, DVDs, Music </option>
+						<option value="Cell Phones (not accessories)"> Cell Phones (not accessories) </option>
+						<option value="Cameras & Drones (not accessories"> Cameras & Drones (not accessories) </option>
+						<option value="Coins & Paper Money"> Coins & Paper Money </option>
+						<option value="Desktops, Laptops & Tablets"> Desktops, Laptops & Tablets </option>
+						<option value="Printers & Monitors"> Printers & Monitors </option>
+						<option value="Computer Components/Parts"> Computer Components/Parts </option>
+						<option value="Video Game Consoles/Systems"> Video Game Consoles/Systems</option>
+					</optgroup>
 				</select>
 			</div>
 		</div>
 
 		<!-- Calculate Button Div -->
 		<div id="calculate">
-			<button id="calculateButton" > See my profit! </button>
+			<a id="calculateButton" > Calculate! </a>
 		</div>
 		<div id="finalResult" class="displayNone">
 			<p> NET PROFIT: </p>

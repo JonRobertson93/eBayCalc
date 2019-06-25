@@ -1,15 +1,12 @@
-// add event listener to button:
-
+// Declaring DOM elements
 let calculateButton = document.getElementById("calculateButton");
 calculateButton.addEventListener('click', calculate);
 let endProfit = document.getElementById('finalResult');
 let storeYes = document.getElementById('storeRadioYes');
 let storeNo = document.getElementById('storeRadioNo');
 let dropdown = document.getElementById('categoryDropdown');
-// let allCategories = ["Everything Else (most categories)", "Books, Movies, DVDS, Music", "Cell Phones (not accessories)",
-// 	 "Cameras & Drones (not accessories)", "Coins & Paper Money", "Desktops, Laptops & Tablets",
-// 	 "Printers & Monitors", "Computer Components/Parts", "Video Game Consoles/Systems"];
 
+// Variable declarations & definitions
 let salePrice = 0;
 let customerShipping = 0;
 let purchasePrice = 0;
@@ -17,15 +14,11 @@ let shippingCost = 0;
 let eBayFees = 0;
 let payPalFees = 0;
 let netProfit = 0;
-
 let income = 0;
 let expenses = 0;
 
-
-
 function calculate () {
 	calculateButton.addEventListener('click', startOver);
-	// salePrice + customerShipping - purchasePrice
 	salePrice = document.getElementsByName("salePrice")[0].value;
 	if (!salePrice) {
 		salePrice = 0.00;
@@ -73,6 +66,7 @@ function calculate () {
 		endProfit.classList.remove("displayNone");
 		endProfit.classList.add("rows");
 		formatNetProfit(netProfit); // red or green
+		window.scrollBy(0, 250);
 	}, 500);
 	endProfit.insertAdjacentHTML('beforeend',  `<p id="detailLink"> Show Details + </p>`);
 	
@@ -80,7 +74,9 @@ function calculate () {
 	setTimeout(function() {
 		let detailLink = document.getElementById('detailLink');
 		detailLink.addEventListener('click', showDetails);
-	}, 500);	
+	}, 500);
+
+
 }
 
 
@@ -98,27 +94,32 @@ function formatNetProfit(netProfit) {
 function showDetails () {
 	endProfit.insertAdjacentHTML('afterend',
 	`<div id="details" class="displayNone">
-			<p class="boldText"> Income: <span class="greenText">$${income}</span> </p>
+			<p class="boldText"> Gross Profit: <span class="greenText">$${income}</span> </p>
 			<ul>
 				<li> <span class="boldText"> Sale Price:</span> $${salePrice} </li>
-				<li> <span class="boldText">Shipping Paid by Customer:</span> $${customerShipping} </li>
+				<li> <span class="boldText">Shipping(charged):</span> $${customerShipping} </li>
 			</ul>
 			<p class="boldText"> Expenses: <span class="redText">$${expenses}</span> </p>
 			<ul> 
 				<li> <span class="boldText">Item cost:</span> $${purchasePrice} </li>
-				<li> <span class="boldText">Shipping to Customer:</span> $${shippingCost} </li>
+				<li> <span class="boldText">Shipping(cost):</span> $${shippingCost} </li>
 				<li> <span class="boldText">eBay Fees:</span> $${eBayFees} </li>
 				<li> <span class="boldText">PayPal Fees:</span> $${payPalFees} </li>
 			</ul>
 		</div>`);
 	let detailsDiv = document.getElementById('details');
 	detailsDiv.classList.remove('displayNone');
+
+		//scroll down page
+	window.scrollBy(0, 320);	
+
 	let detailLink = document.getElementById('detailLink');
 	detailLink.innerHTML = "Hide Details -";
 	//remove listener to show details
 	detailLink.removeEventListener('click', showDetails);
 	//add listener to hide details
 	detailLink.addEventListener('click', hideDetails);
+
 
 }
 
